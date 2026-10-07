@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Study Room Reservation</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Campus Services</p>
+      <h1>Study Room Reservation</h1>
+      <p>Request one study room for a specific date, time, duration, and group size.</p>
+    </header>
+
+    <section class="form-card" aria-labelledby="reservation-heading">
+      <h2 id="reservation-heading">Reservation Details</h2>
+
+      <form action="#" method="post">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input id="studentId" name="studentId" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="room">Room</label>
+            <select id="room" name="room" required>
+              <option value="" selected disabled>Choose a room</option>
+              <option value="library-201">Library 201</option>
+              <option value="library-202">Library 202</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="reservationDate">Reservation Date</label>
+            <input id="reservationDate" name="reservationDate" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="startTime">Start Time</label>
+            <input id="startTime" name="startTime" type="time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="duration">Duration</label>
+            <select id="duration" name="duration" required>
+              <option value="" selected disabled>Choose a duration</option>
+              <option value="30">30 minutes</option>
+              <option value="60">1 hour</option>
+              <option value="90">1 hour 30 minutes</option>
+              <option value="120">2 hours</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="partySize">Number of Attendees</label>
+            <input id="partySize" name="partySize" type="number" min="1" step="1" placeholder="Maximum 6" required>
+            <p id="capacityMessage" class="capacity-message" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <button type="submit">Request Reservation</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
