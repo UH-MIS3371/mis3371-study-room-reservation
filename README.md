@@ -1,33 +1,49 @@
 # MIS 3371 — Study Room Reservation System
 
-This repository contains design artifacts for the MIS 3371 Transaction Processing Systems I capstone project.
+This repository contains design artifacts and the working transaction interface for the MIS 3371 Transaction Processing Systems I capstone project.
 
 ## Project
 **Study Room Reservation System**
 
 The system models a student reserving a study room for a specific date and time.
 
-## Week 3 Design Artifacts
-The Week 3 design files are in the `docs` folder:
+## Project Artifacts
+The design and checkpoint files are in the `docs` folder:
 
 - [Transaction Workflow](docs/workflow-v1.md)
 - [State Transition Model + State Definitions](docs/state-model-v1.md)
 - [Data Dictionary](docs/data-dictionary.md)
 - [Three-Tier Architecture](docs/architecture-v1.md)
 - [Responsibility Notes](docs/responsibility-notes.md)
+- [Week 6 JavaScript Checkpoint](docs/week6-javascript-checkpoint.md)
+
+The working reservation interface is in the `src` folder:
+
+- [HTML Transaction Interface](src/index.html)
+- [CSS](src/styles.css)
+- [JavaScript](src/app.js)
 
 ## Repository Structure
 
 ```text
 /
 ├── README.md
-└── docs/
+├── docs/
     ├── workflow-v1.md
     ├── state-model-v1.md
     ├── data-dictionary.md
     ├── architecture-v1.md
-    └── responsibility-notes.md
+    ├── responsibility-notes.md
+    └── week6-javascript-checkpoint.md
+└── src/
+    ├── index.html
+    ├── styles.css
+    └── app.js
 ```
+
+## Week 6 JavaScript Behavior
+
+The page listens for changes to the attendee count and displays whether the group fits the six-person study room capacity. The rule is implemented in `fitsRoomCapacity(partySize)` and the visible message is updated with `textContent`.
 
 ## Week 3 Requirements Covered
 - Clear transaction trigger and outcome
