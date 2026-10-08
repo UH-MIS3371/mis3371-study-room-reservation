@@ -7,7 +7,9 @@
   --muted: #5f6b7a;
   --border: #cbd5e1;
   --success: #1f6f43;
+  --success-bg: #e8f5ec;
   --error: #9f253b;
+  --error-bg: #fdecef;
 }
 
 * {
@@ -126,12 +128,29 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.capacity-message--success,
+.capacity-message--error {
+  padding: 0.5rem 0.75rem;
+  border-left: 4px solid currentColor;
+  border-radius: 6px;
+}
+
 .capacity-message--success {
+  background: var(--success-bg);
   color: var(--success);
 }
 
 .capacity-message--error {
+  background: var(--error-bg);
   color: var(--error);
+}
+
+.form-group:has(.capacity-message--success) input {
+  border-color: var(--success);
+}
+
+.form-group:has(.capacity-message--error) input {
+  border-color: var(--error);
 }
 
 button {
@@ -157,11 +176,27 @@ button:hover {
     padding-block: 1.5rem;
   }
 
+  .form-card {
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+  }
+
   .form-grid {
     grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  input,
+  select {
+    font-size: 1rem;
+  }
+
+  .capacity-message {
+    font-size: 0.95rem;
   }
 
   button {
     width: 100%;
+    margin-left: 0;
   }
 }
